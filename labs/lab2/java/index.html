@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Java Setup Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Java connection to mySQL database at UVM</h1>
+        
+        <p>This is designed to help get you over the hurdle of connecting to a mySQL database here at uvm.</p>
+        <p>Full documentation for java DB connections is here:
+            <a href="http://docs.oracle.com/javase/tutorial/jdbc/basics/index.html" target="_blank">http://docs.oracle.com/javase/tutorial/jdbc/basics/index.html</a></p>
+        
+        <p>Download the Mysql jar file in this repository. In Eclipse, to add the mysql jar to your project you need to:</p>
+        <ol>
+            <li>create a folder called "lib" in your project</li>
+            <li>Save the .jar file in the lib folder (using Import... or just copying it in and Refreshing the project)</li>
+            <li>In the Properties of the project, choose "Java Build Path", then"Libraries" from the tab,  "Add JARs..." on the left, and add the .jar file they just saved to lib.
+                <figure><img src="java.png"><figcaption></figcaption></figure></li> 
+            
+        </ol>
+        <p>MysqlConnect.java - connects your java code to the database allowing you to run queries.</p>
+        <p>MysqlConnect.properties - holds your connection information so be sure to put your database name, username and password. Note you will need to use yourusername_writer if you want save data. The writer will also allow you to read. </p>
+        <p>TestConnection.java - An example of selecting records and creating the html to display them.</p>
+        
+    </body>
+</html>
