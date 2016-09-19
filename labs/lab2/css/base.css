@@ -61,7 +61,12 @@ p:nth-child(even){
     float: right;
     margin-left: 1em;
 }
-
+.float_left {
+    border: thin solid darkslategray;
+    float: left;
+    margin: 1em 1em 1em 0;
+    padding: 0.5em;
+}
 .small {
     width: 150px;
 }
@@ -72,5 +77,29 @@ nav ol li{
     list-style-type: none;
     padding-right: 2em;
 }
+/*------------------------   table page  only  ------------------------------ */
+#table aside{
+    height: 600px; 
+    float: left; 
+    overflow: auto; 
+    margin-left: 2em;            
+}
+#table section{
+    width: 35%; 
+    height: 600px; 
+    float: left; 
+    overflow: auto;
+}
+#table table{
+    border: medium #000080 solid;
+    border-collapse: collapse;
+}
 
+#table td {
+    border: thin #000080 solid;
+    border-collapse: collapse;
+}
 
+#table th{
+    text-align: left;
+}
