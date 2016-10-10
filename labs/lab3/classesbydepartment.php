@@ -15,7 +15,7 @@
 //put the selected department in an array to pass into the query
     $inputForClassListbox = array($deptSelected);
     //initialize SQL query
-    $classByDept = 'SELECT fldDepartment, fldCourseNumber, fldCourseName, pmkCourseID '
+    $classByDept = 'SELECT fldDepartment, fldCourseNumber, fldCourseTitle, pmkCourseID '
             . 'FROM tblCourses WHERE fldDepartment LIKE ?';
     $classes = $thisDatabaseReader->select($classByDept, $inputForClassListbox, 1, 0, 0, 0, false, false);
     if (is_array($classes)) {
@@ -27,7 +27,7 @@
                 print ' selected="selected"';
             }
             print ">" . $class['fldDepartment'] . "~" . $class['fldCourseNumber'] .
-                    "~" . $class['fldCourseName'] . "~" . $class['pmkCourseID'] . "</option>";
+                    "~" . $class['fldCourseTitle'] . "~" . $class['pmkCourseID'] . "</option>";
         }
     }
     ?>
