@@ -32,15 +32,15 @@ $uniqueCourseInformation = $thisDatabaseReader->select($courseInformation, $uniq
 //print out the information
 if (is_array($uniqueCourseInformation)) {
     foreach ($uniqueCourseInformation as $uniqueCourse) {
-        print "<p>" . $uniqueCourse['fldDepartment'] . " " . $uniqueCourse['fldCourseNumber'] . " " .
-                $uniqueCourse['fldCourseTitle'] . " Credits: " . $uniqueCourse['fldCredits_'] . "</p>
-                <p>Section: " . $uniqueCourse['fldSection'] . " CRN Number: " . $uniqueCourse['fldComputerNumber'] .
-                " Lecture/Lab: " . $uniqueCourse['fldLectureLab'] . " Camp Code: " . $uniqueCourse['fldCampCode'] . "</p>
-                <p>Teacher: " . $uniqueCourse['fnkTeacherNetId']  . " Max Enrollment: " . $uniqueCourse['fldMaxEnrollment'] . " Current Enrollment: "
-                . $uniqueCourse['fldCurrentEnrollment'] . "</p> <p>Start Time: " . $uniqueCourse['fldStart'] .
-                " End Time: " . $uniqueCourse['fldStop'] . " Days: " . $uniqueCourse['fldDays'] .
-                " Building: " . $uniqueCourse['fldBuilding'] . " Room: " . $uniqueCourse['fldRoom'] . "</p>";
-        echo "<br />\n";  
+        print '<p>' . $uniqueCourse['fldDepartment'] . ' ' . $uniqueCourse['fldCourseNumber'] . ' ' .
+                $uniqueCourse['fldCourseTitle'] . ' Credits: ' . $uniqueCourse['fldCredits_'] . '</p>
+                <p>Section: ' . $uniqueCourse['fldSection'] . ' CRN Number: ' . $uniqueCourse['fldComputerNumber'] .
+                ' Lecture/Lab: ' . $uniqueCourse['fldLectureLab'] . ' Camp Code: ' . $uniqueCourse['fldCampCode'] . '</p>
+                <p>Teacher: ' . $uniqueCourse['fnkTeacherNetId']  . ' Max Enrollment: ' . $uniqueCourse['fldMaxEnrollment'] . ' Current Enrollment: '
+                . $uniqueCourse['fldCurrentEnrollment'] . '</p> <p>Start Time: ' . $uniqueCourse['fldStart'] .
+                ' End Time: ' . $uniqueCourse['fldStop'] . ' Days: ' . $uniqueCourse['fldDays'] .
+                ' Building: ' . $uniqueCourse['fldBuilding'] . ' Room: ' . $uniqueCourse['fldRoom'] . '</p>';
+        echo '<br />\n';  
     }
 }
 ?>

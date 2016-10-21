@@ -7,12 +7,12 @@
     $distinctDepartments = $thisDatabaseReader->select($distinctDepartmentQuery, "", 0, 0, 0, 0, false, false);
     if (is_array($distinctDepartments)) {
         foreach ($distinctDepartments as $department) {
-            print "<option";
+            print '<option';
             //get selected to preserve from previous submission
             if ($department['fldDepartment'] == $deptSelected) {
                 print ' selected="selected"';
             }
-            print ">" . $department['fldDepartment'] . "</option>";
+            print '>' . $department['fldDepartment'] . '</option>';
         }
     }
     ?>

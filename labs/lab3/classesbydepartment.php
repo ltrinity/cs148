@@ -21,13 +21,13 @@
     if (is_array($classes)) {
         foreach ($classes as $class) {
 //                show the info related to each course in the department as an option in the listbox
-            print "<option";
+            print '<option';
             //preserve submission from previous input
             if ($class['pmkCourseID'] == $courseIDpmk) {
                 print ' selected="selected"';
             }
-            print ">" . $class['fldDepartment'] . "~" . $class['fldCourseNumber'] .
-                    "~" . $class['fldCourseTitle'] . "~" . $class['pmkCourseID'] . "</option>";
+            print '>' . $class['fldDepartment'] . '~' . $class['fldCourseNumber'] .
+                    '~' . $class['fldCourseTitle'] . '~' . $class['pmkCourseID'] . '</option>';
         }
     }
     ?>
