@@ -1,0 +1,117 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 1, 2014, 4:10:12 PM
+    Author     : luket_000
+*/
+#inlineform {
+    display:inline;
+}
+nav{
+    border-spacing: 20px;
+}
+img {
+    opacity: 1;
+    width:800px;
+    height:500px;
+}
+h1 {
+    text-shadow: 0px 2px 2px black;
+    color: white;
+    font: 40px 'LeagueGothicRegular';
+    line-height: 90%;}
+body{
+    background-position: top;
+    background-repeat: repeat-x;
+    background-color: maroon;
+    text-align: center;
+    margin-left: 7cm;
+    margin-right: 7cm;
+    color: white;
+}
+a:link{
+    color: white;
+}
+a:visited{
+    color: cyan;
+}
+a:hover {
+    background: blue;
+
+}
+a:active {
+    color: lightseagreen;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    display: inline;
+    margin:1.5em;
+}
+
+p {
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+
+}
+fieldset{
+    border: 1px solid #ffffff;
+    clear: both;  
+}
+
+
+/* need to clear any floats that may exist */
+
+/* just pushes content to left side of the box. */
+fieldset.contact{
+    float: left;
+}
+/* when you look at the labels this pushes then next to the input and right
+aligns them. Display block means they are each on their own line. */
+fieldset.contact label{
+    display: block;
+    text-align: right /* pushes the text to the right where they line up */
+        /* the float left above pushes everything back to the left*/
+}
+fieldset.contact input{
+    width: 15em; /* works with above to be the same size for the boxes */
+}
+
+fieldset.buttons{
+    border: none;
+    display: inline;
+}
+
+fieldset.wrapper {
+    border: 0;
+    margin: auto;
+}
+
+fieldset.wrapper legend {
+    color: #000000;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+fieldset.wrapper > legend {
+    /* i only want the first legend ie if it follows the class wrapper */
+    font-size: 2em;
+}
+
+/***********************************************************************/
+
+label {
+    color: #ffffff;
+    display: block;
+    font-size: .9em;
+    font-weight: bold;
+}
