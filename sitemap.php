@@ -12,13 +12,13 @@
 <p>Develop <a href="labs/lab2/index.php">Lab2</a></p>
 <p>Develop <a href="labs/lab3/index.php">Lab3</a></p>
 <p>Develop <a href="labs/lab4/index.php">Lab4</a></p>
-<p>Develop <a href="labs/lab5/er.php">Lab5 aka er diagram</a></p>
+<p>Develop <a href="labs/lab5/index.php">Lab5</a></p>
 
 <p>Live <a href="https://ltrinity.w3.uvm.edu/cs148/labs/lab1/index.php">Lab1</a></p>
 <p>Live <a href="https://ltrinity.w3.uvm.edu/cs148/labs/lab2/index.php">Lab2</a></p>
 <p>Live <a href="https://ltrinity.w3.uvm.edu/cs148/labs/lab3/index.php">Lab3</a></p>
 <p>Live <a href="https://ltrinity.w3.uvm.edu/cs148/labs/lab4/index.php">Lab4</a></p>
-<p>Live <a href="https://ltrinity.w3.uvm.edu/cs148/labs/lab5/er.php">Lab 5 aka er diagram</a></p>
+<p>Live <a href="https://ltrinity.w3.uvm.edu/cs148/labs/lab5/index.php">Lab 5</a></p>
 
 <p><a href="labs/lab3/er-diagram.JPG">Lab 3 ER diagram</a></p>
 <p><a href="labs/lab3/schema.html">Lab 3 Schema</a></p>

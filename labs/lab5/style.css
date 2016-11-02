@@ -13,6 +13,17 @@ and open the template in the editor.
 nav{
     border-spacing: 20px;
 }
+#planForm{
+        margin-left: 8cm;
+    margin-right: 8cm;
+}
+#test{
+    margin-left: 7cm;
+    margin-right: 7cm;
+}
+td {
+   border: 1px solid black;
+}
 img {
     opacity: 1;
     width:800px;
