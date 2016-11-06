@@ -7,6 +7,9 @@ and open the template in the editor.
     Created on : Sep 1, 2014, 4:10:12 PM
     Author     : luket_000
 */
+#maxwidth{
+    max-width:30%
+}
 #inlineform {
     display:inline;
 }
@@ -14,8 +17,8 @@ nav{
     border-spacing: 20px;
 }
 #planForm{
-        margin-left: 8cm;
-    margin-right: 8cm;
+        margin-left: 3cm;
+    margin-right: 3cm;
 }
 #test{
     margin-left: 7cm;

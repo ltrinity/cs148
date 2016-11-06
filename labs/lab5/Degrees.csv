@@ -1,0 +1,194 @@
+ID,Type,Concenration,College
+1,B.S.,Accounting,GSB
+2,B.S.,Animal Science,CALS
+3,Ph.D.,"Animal, Nutrition and Food Sciences",CALS
+4,B.A.,Anthropology,CAS
+5,B.S.,Art Education,CAS
+6,B.A.,Art History,CAS
+7,B.A.,"Art, Studio",CAS
+8,B.A.,Asian Studies,CAS
+9,B.S.,Athletic Training,CNHS
+10,B.S.,Biochemistry,CALS
+11,M.S.,Biochemistry,CALS
+12,Ph.D.,Biochemistry,CALS
+13,Ph.D.,Bioengineering,CAS
+14,B.S.,"Biological Sciences, Integrated",CALS
+15,B.A.,Biology,CAS
+16,M.S.,Biology,CAS
+17,M.S.T.,Biology,CAS
+18,Ph.D.,Biology,CAS
+19,B.S.,Biomedical Engineering,CEMS
+20,M.S.,Biostatistics,CEMS
+21,B.S.,Business Administration,GBS
+22,M.B.A.,Business Administration,GBS
+23,B.S.,Business Analytics,GBS
+24,M.S.,"Cellular, Molecular and Biomedical Sciences",CHNS
+25,Ph.D.,"Cellular, Molecular and Biomedical Sciences",CHNS
+26,B.A.,Chemistry,CAS
+27,B.S.,Chemistry,CAS
+28,M.S.,Chemistry,CAS
+29,Ph.D.,Chemistry,CAS
+30,B.A.,Chinese,CAS
+31,B.S.,Civil Engineering,CEMS
+32,M.S.,Civil Engineering,CEMS
+33,Ph.D.,Civil Engineering,CEMS
+34,B.A.,Classics/Classical Civilization,CAS
+35,M.A.,Classics/Classical Civilization,CAS
+36,Certificate of Graduate Study,Clincal and Translational Science,CNHS
+37,M.S.,Clincal and Translational Science,CNHS
+38,Ph.D.,Clincal and Translational Science,CNHS
+39,B.S.,Communication Sciences and Disorders,CNHS
+40,M.S.,Communication Sciences and Disorders,CNHS
+41,B.S.,Community and International Development,CALS
+42,M.S.,Community Development and Applied Economics,CALS
+43,B.S.,Community Entrepreneurship,CALS
+44,Certificate of Graduate Study,Complex Systems,CEMS
+45,M.S.,Complex Systems,CEMS
+46,B.A.,Computer Science,CAS
+47,B.S.,Computer Science,CEMS
+48,M.S.,Computer Science,CEMS
+49,Ph.D.,Computer Science,CEMS
+50,B.S.,Computer Science Information Systems,CEMS
+51,M.S.,Conseling,CESS
+52,M.A.T.,Curriculum and Instruction,CESS
+53,M.Ed.,Curriculum and Instruction,CESS
+54,B.S.,Data Science,CEMS
+55,B.S.,"Dietetics, Nutrition and Food Sciences",CALS
+56,M.S.D.,"Dietetics, Nutrition and Food Sciences",CALS
+57,B.S.,Early Childhood Education,CESS
+58,B.S.,Early Childhood Special Education,CESS
+59,M.Ed.,Early Childhood Special Education,CESS
+60,B.S.,Ecological Agriculture,CALS
+61,Certificate of Graduate Study,Ecological Economics,GIEE
+62,B.A.,Economics,CAS
+63,B.S.,Economics,GBS
+64,M.Ed.,Educational Leadership,CESS
+65,Ed.D.,Educational Leadership and Policy Studies,CESS
+66,Ph.D.,Educational Leadership and Policy Studies,CESS
+67,B.S.,Electrical Engineering,CEMS
+68,M.S.,Electrical Engineering,CEMS
+69,Ph.D.,Electrical Engineering,CEMS
+70,B.S.,Engineering Management,CEMS
+71,B.A.,English,CAS
+72,M.A.,English,CAS
+73,B.S.,Entrepreneurship,GBS
+74,B.S.,Environmental Engineering,CEMS
+75,B.S.,Environmental Sciences,CALS
+76,B.A.,Environmental Studies,CAS
+77,B.S.,Environmental Studies,CALS
+78,B.A.,European Studies,CAS
+79,B.S.,Exercise and Movement Sciences,CNHS
+80,M.S,Field Naturalist - Plant Biology,CALS
+81,B.A.,Film and Television Studies,CAS
+82,B.S.,Finance,GBS
+83,B.S.,Food Systems,CALS
+84,M.S.,Food Systems,CALS
+85,Ph.D.,Food Systems,CALS
+86,B.S.,Forestry,SENR
+87,B.A.,French,CAS
+88,M.A.,French,CAS
+89,B.A.,"Gender, Sexuality, and Women's Studies",CAS
+90,B.A.,Geography,CAS
+91,B.A.,Geology,CAS
+92,B.S.,Geology,CAS
+93,M.S.,Geology,CAS
+94,B.A.,German,CAS
+95,M.A.,German,CAS
+96,B.S.,Global Business,GBS
+97,B.A.,Global Studies,CAS
+98,B.A.,Greek,CAS
+99,M.A.,Greek,CAS
+100,M.A.T.,Greek,CAS
+101,M.Ed.,Higher Education and Student Affairs Administration,CESS
+102,M.S.,Historic Preservations,CAS
+103,B.A.,History,CAS
+104,M.A.,History,CAS
+105,B.S.,Human Development and Family Studies,CESS
+106,B.A.,Individual Design,N/A
+107,B.S.,Integrated Biological Science,CALS
+108,M.Ed.,Interdisciplinary Studies,N/A
+109,Certificate of Graduate Study,Interdisciplinary Study of Disabilities,CDCI
+110,B.A.,Italian Studies,CAS
+111,B.A.,Japanese,CAS
+112,B.A.,Latin,CAS
+113,M.A.,Latin,CAS
+114,M.A.T.,Latin,CAS
+115,B.A.,Latin American and Caribbean Studies,CAS
+116,B.A.,Linguistics,CAS
+117,B.S.,Marketing,GBS
+118,M.S.,Materials Science,CEMS
+119,Ph.D.,Materials Science,CEMS
+120,Ph.D.,Mathematical Sciences,CAS
+121,B.A.,Mathematics,CAS
+122,B.S.,Mathematics,CEMS
+123,M.S.,Mathematics,CEMS
+124,M.S.T.,Mathematics,CEMS
+125,B.S.,Mechanical Engineering,CEMS
+126,M.S.,Mechanical Engineering,CEMS
+127,Ph.D.,Mechanical Engineering,CEMS
+128,B.S.,Medical Laboratory Science,CNHS
+129,B.S.,Medical Radiation Sciences,CNHS
+130,B.S.,Microbiology,CALS
+131,M.S.,Microbiology and Molecular Genetics,CNHS
+132,Ph.D.,Microbiology and Molecular Genetics,CNHS
+133,B.S.,Middle Level Education,CESS
+134,B.S.,Molecular Genetics,CALS
+135,M.S.,Molecular Physiology and Biophysics,CNHS
+136,Ph.D.,Molecular Physiology and Biophysics,CNHS
+137,B.A.,Music,CAS
+138,B.M.,Music,CAS
+139,B.S.,Music Education,CAS
+140,B.S.,Natural Resources,CALS
+141,M.S.,Natural Resources,CALS
+142,Ph.D.,Natural Resources,CALS
+143,B.S.,Neuroscience,CAS
+144,Ph.D.,Neuroscience,CAS
+145,B.S.,Nursing,CNHS
+146,M.S.,Nursing,CNHS
+147,B.S.,Nutrition and Food Sciences,CALS
+148,M.S.,Nutrition and Food Sciences,CALS
+149,B.S.,"Parks, Recreation and Tourism",RSENR
+150,M.S.,Pathology and Laboratory Medicine,CM
+151,M.S.,Pharmacology,CM
+152,Ph.D.,Pharmacology,CM
+153,B.A.,Philosophy,CAS
+154,B.S.,Physical Education,CESS
+155,D.P.T.,Physical Therapy,CNHS
+156,B.A.,Physics,CAS
+157,B.S.,Physics,CEMS
+158,M.S.,Physics,CEMS
+159,M.S.,Plant and Soil Science,CALS
+160,Ph.D.,Plant and Soil Science,CALS
+161,B.A.,Plant Biology,CAS
+162,B.S.,Plant Biology,CALS
+163,M.S.,Plant Biology,CAS
+164,Ph.D.,Plant Biology,CAS
+165,B.A.,Political Science,CAS
+166,Pre-professinal program,Prelaw,Pre-Prosfessional advising
+167,Pre-professinal program,Premedical and Predental Studies,Pre-Prosfessional advising
+168,Pre-professinal program,Preveterinary,Pre-Prosfessional advising
+169,B.A.,Psychological Science,CAS
+170,B.S.,Psychological Science,CAS
+171,Ph.D.,Psychology,CAS
+172,M.P.A.,Public Administration,CALS
+173,B.S.,Public Communication,CALS
+174,B.A.,Religion,CAS
+175,B.A.,Russian,CAS
+176,B.A.,Russian/East European Studies,CAS
+177,B.S.,Secondary Education,CESS
+178,B.S.,Self-Designed,N/A
+179,B.S.,Social Work,CESS
+180,M.S.W.,Social Work,CESS
+181,B.A.,Sociology,CAS
+182,B.A.,Spanish,CAS
+183,M.Ed.,Special Education,CESS
+184,Post-Master's,Special Education,CESS
+185,B.S.,Statistics,CEMS
+186,M.S.,Statistics,CEMS
+187,B.S.,Sustainable Business,GBS
+188,B.S.,Sustainable Landscape Horticulture,CALS
+189,B.A.,Theatre,CAS
+190,Undeclared,Major,N/A
+191,B.S.,Wildlife and Fisheries Biology,CALS
+192,B.A.,Zoology,CALS
+193,B.S.,Zoology,CALS
