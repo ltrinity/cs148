@@ -11,6 +11,11 @@
         } else {
             print '<li><a href="index.php">Index</a></li>';
         }
+        if ($PATH_PARTS['filename'] == "add") {
+            print '<li class="activePage"><a href="add.php">Add Courses</a></li>';
+        } else {
+            print '<li><a href="add.php">Add Courses</a></li>';
+        }
         
         if ($PATH_PARTS['filename'] == "er") {
             print '<li class="activePage"><a href="er.php">ER Diagram</a></li>';
