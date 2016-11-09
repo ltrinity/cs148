@@ -194,6 +194,12 @@ if (isset($_GET["formSubmit"])) {
             print ' selected="selected"';
         }
         print '>Spring</option>';
+        print '<option value = "Summer"';
+        //get selected to preserve from previous submission
+        if ("Summer" == $termSelected) {
+            print ' selected="selected"';
+        }
+        print '>Summer</option>';
         ?>
         <!--end select-->
     </select>

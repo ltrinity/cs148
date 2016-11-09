@@ -7,6 +7,20 @@ and open the template in the editor.
     Created on : Sep 1, 2014, 4:10:12 PM
     Author     : luket_000
 */
+.Major{
+    background-color: cyan;
+}
+.Minor{
+    background-color: orange;
+}
+.Elective{
+    background-color: yellow;
+}
+table, th, td{
+   text-align:center;
+   border: 1px solid white;
+   padding: 15px;
+}
 #maxwidth{
     max-width:30%
 }

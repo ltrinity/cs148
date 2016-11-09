@@ -22,8 +22,9 @@ if (isset($_GET["formSubmit"])) {
             . 'fnkCourseId, fnkTerm, fldTerm, fnkTermYear, fldTermYear, fldRequirement FROM tblSemestersCourses '
             . 'JOIN tblCourses ON pmkCourseId = fnkCourseId '
             . 'JOIN tblSemesters ON fnkTerm = fldTerm AND fnkTermYear = fldTermYear '
-            . 'WHERE tblSemestersCourses.fnkPlanId = ?';
-    $classes = $thisDatabaseReader->select($classQuery, $planInput, 1, 1, 0, 0, false, false);
+            . 'WHERE tblSemestersCourses.fnkPlanId = ? ORDER BY fldTermYear,fldTerm';
+    
+    $classes = $thisDatabaseReader->select($classQuery, $planInput, 1, 2, 0, 0, false, false);
 }
 ?>
 <!--begin form-->
@@ -70,10 +71,10 @@ if (isset($_GET["formSubmit"])) {
 $getCurrentInfoQuery = 'SELECT fldType, fldConcentration, fldCollege ,fldDateCreated, fldCatalogYear, fnkStudentNetId, fnkAdvisorNetId ';
 $getCurrentInfoQuery .= 'FROM tblPlans JOIN tblDegrees ON pmkDegreeId = fnkDegreeId WHERE pmkPlanId = ?';
 $getInfoData = array($planSelected);
-if($planSelected != ""){
+if ($planSelected != "") {
     $currentInformation = $thisDatabaseReader->select($getCurrentInfoQuery, $getInfoData, 1);
 }
-if(is_array($currentInformation)){
+if (is_array($currentInformation)) {
     $oneRow = $currentInformation[0];
     print '<h3>Current Plan Information</h3>';
     print '<p>Degree: ' . $oneRow['fldType'] . $oneRow['fldConcentration'] . $oneRow['fldCollege'] . '</p>';
@@ -90,21 +91,34 @@ if(is_array($currentInformation)){
     $aLastName = $aNameArray[1];
     print '<p>Student Name: ' . $sFirstName . " " . $sLastName . '</p>';
     print '<p>Student Email: ' . $sEmail . '</p>';
-        //if advisor is not null create advisor email else it is also null
-    if($oneRow['fnkAdvisorNetId']!=""){
-    $aEmail = $oneRow['fnkAdvisorNetId'] . "@uvm.edu";
-    print '<p>Advisor Name: ' . $aFirstName . " " . $aLastName . '</p>';
-print '<p>Advisor Email: ' . $aEmail . '</p>';}
-}
-if (is_array($classes)) {
-    foreach ($classes as $class) {
-        print '<p>' . $class['fldDepartment'] . '</p>';
-        print '<p>' .$class['fldCourseNumber']. '</p>';
-        print '<p>' .$class['fldCourseTitle']. '</p>';
-        print '<p>' .$class['fldTerm']. '</p>';
-        print '<p>' .$class['fldTermYear']. '</p>';
-        print '<p>' .$class['fldRequirement']. '</p>';
+    //if advisor is not null create advisor email else it is also null
+    if ($oneRow['fnkAdvisorNetId'] != "") {
+        $aEmail = $oneRow['fnkAdvisorNetId'] . "@uvm.edu";
+        print '<p>Advisor Name: ' . $aFirstName . " " . $aLastName . '</p>';
+        print '<p>Advisor Email: ' . $aEmail . '</p>';
     }
 }
+if (is_array($classes)) {
+    print '<table>';
+    print '<tr>';
+    print '<th>Year</th>';
+    print '<th>Semester</th>';
+    print '<th>Department</th>';
+    print '<th>Number</th>';
+    print '<th>Title</th>';
+    print '</tr>';
+    foreach ($classes as $class) {
+        print '<tr class = "'. $class['fldRequirement'] . '">';
+        print '<td>' . $class['fldTermYear'] . '</td>';
+        print '<td>' . $class['fldTerm'] . '</td>';
+        print '<td>' . $class['fldDepartment'] . '</td>';
+        print '<td>' . $class['fldCourseNumber'] . '</td>';
+        print '<td>' . $class['fldCourseTitle'] . '</td>';
+        print '</tr>';
+    }
+    print '</table>';
+}
+
+
 include "footer.php";
 ?>
