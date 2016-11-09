@@ -49,9 +49,11 @@ if (isset($_GET["formSubmit"])) {
                         print ' value = "';
                         print $plan['pmkPlanId'];
                         print '">';
-                        print $plan['fldType'];
-                        print $plan['fldConcentration'];
                         print $plan['fldCollege'];
+                        print ' ';
+                        print $plan['fldType'];
+                        print ' ';
+                        print $plan['fldConcentration'];
                         print " Catalog Year: ";
                         print $plan['fldCatalogYear'];
                         print '</option>';
@@ -76,8 +78,9 @@ if ($planSelected != "") {
 }
 if (is_array($currentInformation)) {
     $oneRow = $currentInformation[0];
-    print '<h3>Current Plan Information</h3>';
-    print '<p>Degree: ' . $oneRow['fldType'] . $oneRow['fldConcentration'] . $oneRow['fldCollege'] . '</p>';
+    print '<fieldset>';
+    print '<legend>Current Plan Information</legend>';
+    print '<p>Degree: ' . $oneRow['fldType'] . " ".$oneRow['fldConcentration'] . " ".$oneRow['fldCollege'] . '</p>';
     print '<p>Catalog Year: ' . $oneRow['fldCatalogYear'] . '</p>';
     print '<p>Date Created: ' . $oneRow['fldDateCreated'] . '</p>';
     //parse student name
@@ -97,6 +100,7 @@ if (is_array($currentInformation)) {
         print '<p>Advisor Name: ' . $aFirstName . " " . $aLastName . '</p>';
         print '<p>Advisor Email: ' . $aEmail . '</p>';
     }
+    print '</fieldset>';
 }
 if (is_array($classes)) {
     print '<table>';

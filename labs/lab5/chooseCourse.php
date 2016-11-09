@@ -20,6 +20,17 @@ $planQueryData = array($currentUser);
 $plans = $thisDatabaseReader->select($getPlansQuery, $planQueryData, 1);
 ################################################################
 //if form is submitted
+if (isset($_GET["filter"])) {
+//get the values from the form
+    $planSelected = htmlentities($_GET["plans"], ENT_QUOTES, "UTF-8");
+    //get the submitted dept value and store in $dept default % to get all classes before dept is set
+    $deptSelected = htmlentities($_GET['departmentLB'], ENT_QUOTES, "UTF-8");
+    //get the submitted class value and store in $class default % to get all classes in dept before classes is set
+    $classSelected = htmlentities($_GET['classbydeptLB'], ENT_QUOTES, "UTF-8");
+    $termSelected = htmlentities($_GET['termLB'], ENT_QUOTES, "UTF-8");
+    $termYearSelected = htmlentities($_GET['termYearLB'], ENT_QUOTES, "UTF-8");
+    $requirement = htmlentities($_GET['requirementLB'], ENT_QUOTES, "UTF-8");
+}
 if (isset($_GET["formSubmit"])) {
     //get the values from the form
     $planSelected = htmlentities($_GET["plans"], ENT_QUOTES, "UTF-8");
@@ -55,14 +66,18 @@ if (isset($_GET["formSubmit"])) {
         $tblSemestersCoursesQuery .= 'fldRequirement = ?,';
         $tblSemestersCoursesQuery .= 'fnkCourseId = ?';
         $thisDatabaseWriter->insert($tblSemestersCoursesQuery, $tblSemestersCoursesInfo);
+        $classSelected="";
+        $requirement="";
+        print '<h3> You just added a course to your plan </h3>';
     }
+
+
 }
 ?>
 <!--begin form-->
 <form method = "get" action = "chooseCourse.php" id="inlineform">
     <fieldset id = "planForm2">
         <legend>Choose a plan to edit</legend>
-        <label>Your Plans
             <select name="plans">
                 <?php
                 if (is_array($plans)) {
@@ -80,7 +95,11 @@ if (isset($_GET["formSubmit"])) {
                         print ' value = "';
                         print $plan['pmkPlanId'];
                         print '">';
-                        print $plan['fldDegree'];
+                        print $plan['fldCollege'];
+                        print ' ';
+                        print $plan['fldType'];
+                        print ' ';
+                        print $plan['fldConcentration'];
                         print " Catalog Year: ";
                         print $plan['fldCatalogYear'];
                         print '</option>';
@@ -89,13 +108,14 @@ if (isset($_GET["formSubmit"])) {
                 ?>
                 <!--end select-->
             </select>
-        </label>
     </fieldset>
     <fieldset class="buttons">
         <legend></legend>
     </fieldset>
     <!--this page will display a listbox of all distinct departments-->
     <!--    begin select with name departmentLB-->
+    <fieldset class="PlanForm">
+    <legend>Filter courses by department</legend>
     <select name="departmentLB">
         <?php
 //select and print all distinct departments in the courses table as an option int the listbox
@@ -155,6 +175,13 @@ if (isset($_GET["formSubmit"])) {
         ?>
         <!--end select-->
     </select>
+    <fieldset class="buttons">
+        <legend></legend>
+        <input type="submit" id="filter" name="filter" value="Filter" tabindex="900" class="button">
+    </fieldset>
+    </fieldset>
+    <fieldset class="PlanForm">
+    <legend>Select a year and semester</legend>
     <select name="termYearLB">
         <?php
         print '<option';
@@ -203,6 +230,9 @@ if (isset($_GET["formSubmit"])) {
         ?>
         <!--end select-->
     </select>
+    </fieldset>
+    <fieldset class="PlanForm">
+    <legend>What requirement does this course fulfill?</legend>
     <select name="requirementLB">
         <?php
         print '<option';
@@ -232,6 +262,7 @@ if (isset($_GET["formSubmit"])) {
         ?>
         <!--end select-->
     </select>
+    </fieldset>
     <!--submit button code-->
     <fieldset class="buttons">
         <legend></legend>

@@ -16,6 +16,9 @@ and open the template in the editor.
 .Elective{
     background-color: yellow;
 }
+table{
+    margin-left: 2cm;
+}
 table, th, td{
    text-align:center;
    border: 1px solid white;
@@ -36,6 +39,10 @@ nav{
 }
 #planForm2{
         margin-left: 3cm;
+    margin-right: 3cm;
+}
+.PlanForm{
+    margin-left: 3cm;
     margin-right: 3cm;
 }
 #test{
