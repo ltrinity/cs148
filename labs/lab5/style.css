@@ -8,13 +8,13 @@ and open the template in the editor.
     Author     : luket_000
 */
 .Major{
-    background-color: cyan;
+    background-color: green;
 }
 .Minor{
-    background-color: orange;
+    background-color: darkblue;
 }
 .Elective{
-    background-color: yellow;
+    background-color: darkmagenta;
 }
 table{
     margin-left: 2cm;

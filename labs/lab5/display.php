@@ -92,17 +92,21 @@ if (is_array($currentInformation)) {
     $aNameArray = explode(":", ldapName($oneRow['fnkAdvisorNetId']));
     $aFirstName = $aNameArray[0];
     $aLastName = $aNameArray[1];
-    print '<p>Student Name: ' . $sFirstName . " " . $sLastName . '</p>';
-    print '<p>Student Email: ' . $sEmail . '</p>';
+    print '<p>Student: '. $sFirstName . " " . $sLastName . ' - ' . $sEmail . '</p>';
     //if advisor is not null create advisor email else it is also null
     if ($oneRow['fnkAdvisorNetId'] != "") {
         $aEmail = $oneRow['fnkAdvisorNetId'] . "@uvm.edu";
-        print '<p>Advisor Name: ' . $aFirstName . " " . $aLastName . '</p>';
-        print '<p>Advisor Email: ' . $aEmail . '</p>';
+        print '<p>Advisor: ' . $aFirstName . " " . $aLastName . ' - ' . $aEmail . '</p>';
     }
     print '</fieldset>';
 }
 if (is_array($classes)) {
+    print '<fieldset>';
+    print '<legend>Color Legend</legend>';
+    print '<p class ="Major">Major</p>';
+    print '<p class ="Minor">Minor</p>';
+    print '<p class ="Elective">Elective</p>';
+    print '</fieldset>';
     print '<table>';
     print '<tr>';
     print '<th>Year</th>';
