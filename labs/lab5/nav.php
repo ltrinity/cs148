@@ -11,16 +11,17 @@
         } else {
             print '<li><a href="index.php">Index</a></li>';
         }
-        if ($PATH_PARTS['filename'] == "display") {
-            print '<li class="activePage"><a href="display.php">Display Plans</a></li>';
-        } else {
-            print '<li><a href="display.php">Display Plans</a></li>';
-        }
         if ($PATH_PARTS['filename'] == "chooseCourse") {
             print '<li class="activePage"><a href="chooseCourse.php">Choose Course</a></li>';
         } else {
             print '<li><a href="chooseCourse.php">Choose Course</a></li>';
         }
+        if ($PATH_PARTS['filename'] == "display") {
+            print '<li class="activePage"><a href="display.php">Display Plans</a></li>';
+        } else {
+            print '<li><a href="display.php">Display Plans</a></li>';
+        }
+        
         
         if ($PATH_PARTS['filename'] == "er") {
             print '<li class="activePage"><a href="er.php">ER Diagram</a></li>';

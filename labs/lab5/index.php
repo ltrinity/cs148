@@ -70,6 +70,7 @@ if (isset($_GET["btnSubmit"])) {
     $tblPlansQuery .= 'fldCatalogYear = ? ,';
     $tblPlansQuery .= 'fldPlanCredits = 0';
     $thisDatabaseWriter->insert($tblPlansQuery, $tblPlansInfo);
+    print '<h3>You created a plan!</h3>';
 }
 ?>
 <!--Start form--> 

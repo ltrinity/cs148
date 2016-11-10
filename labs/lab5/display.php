@@ -18,7 +18,7 @@ if (isset($_GET["formSubmit"])) {
     //get the values from the form
     $planSelected = htmlentities($_GET["plans"], ENT_QUOTES, "UTF-8");
     $planInput = array($planSelected);
-    $classQuery = 'SELECT fldDepartment, fldCourseNumber, fldCourseTitle, pmkCourseId, '
+    $classQuery = 'SELECT DISTINCT fldDepartment, fldCourseNumber, fldCourseTitle, pmkCourseId, '
             . 'fnkCourseId, fnkTerm, fldTerm, fnkTermYear, fldTermYear, fldRequirement FROM tblSemestersCourses '
             . 'JOIN tblCourses ON pmkCourseId = fnkCourseId '
             . 'JOIN tblSemesters ON fnkTerm = fldTerm AND fnkTermYear = fldTermYear '
