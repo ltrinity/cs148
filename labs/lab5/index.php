@@ -62,6 +62,9 @@ if (isset($_GET["btnSubmit"])) {
     $tblAdvisorsQuery .= 'fldAdvisorLastName = ? ,';
     $tblAdvisorsQuery .= 'fldAdvisorEmail = ?';
     $thisDatabaseWriter->insert($tblAdvisorsQuery, $tblAdvisorsInfo);
+    if($degreeSelected == ""){
+        print '<h3>You must select a degree</h3>';
+    } else{
     $tblPlansQuery = 'INSERT INTO tblPlans SET ';
     $tblPlansQuery .= 'fnkStudentNetId = ? ,';
     $tblPlansQuery .= 'fnkAdvisorNetId = ? ,';
@@ -70,7 +73,7 @@ if (isset($_GET["btnSubmit"])) {
     $tblPlansQuery .= 'fldCatalogYear = ? ,';
     $tblPlansQuery .= 'fldPlanCredits = 0';
     $thisDatabaseWriter->insert($tblPlansQuery, $tblPlansInfo);
-    print '<h3>You created a plan!</h3>';
+    print '<h3>You created a plan!</h3>';}
 }
 ?>
 <!--Start form--> 
