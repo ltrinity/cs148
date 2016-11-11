@@ -18,13 +18,17 @@ if (isset($_GET["formSubmit"])) {
     //get the values from the form
     $planSelected = htmlentities($_GET["plans"], ENT_QUOTES, "UTF-8");
     $planInput = array($planSelected);
+    //get all the classes for that plan
     $classQuery = 'SELECT DISTINCT fldDepartment, fldCourseNumber, fldCourseTitle, pmkCourseId, '
             . 'fnkCourseId, fnkTerm, fldTerm, fnkTermYear, fldTermYear, fldRequirement FROM tblSemestersCourses '
             . 'JOIN tblCourses ON pmkCourseId = fnkCourseId '
             . 'JOIN tblSemesters ON fnkTerm = fldTerm AND fnkTermYear = fldTermYear '
             . 'WHERE tblSemestersCourses.fnkPlanId = ? ORDER BY fldTermYear,fldTerm';
-    
     $classes = $thisDatabaseReader->select($classQuery, $planInput, 1, 2, 0, 0, false, false);
+    //get the credits by semester
+    $creditsQuery = 'SELECT SUM(fldCredits),fnkTerm,fnkTermYear FROM tblCourses JOIN tblSemestersCourses ON pmkCourseId = fnkCourseId'
+            . ' WHERE tblSemestersCourses.fnkPlanId = ? GROUP BY fnkTerm,fnkTermYear ORDER BY fnkTermYear, fnkTerm';
+    $credits = $thisDatabaseReader->select($creditsQuery, $planInput, 1, 1, 0, 0, false, false);
 }
 ?>
 <!--begin form-->
@@ -34,6 +38,7 @@ if (isset($_GET["formSubmit"])) {
         <label>Choose your plan.
             <select name="plans">
                 <?php
+                //if they have any plans
                 if (is_array($plans)) {
                     print '<option';
                     //get selected to preserve from previous submission
@@ -70,6 +75,7 @@ if (isset($_GET["formSubmit"])) {
     </fieldset>
 </form>
 <?php
+//get the info about the classes for their plan
 $getCurrentInfoQuery = 'SELECT fldType, fldConcentration, fldCollege ,fldDateCreated, fldCatalogYear, fnkStudentNetId, fnkAdvisorNetId ';
 $getCurrentInfoQuery .= 'FROM tblPlans JOIN tblDegrees ON pmkDegreeId = fnkDegreeId WHERE pmkPlanId = ?';
 $getInfoData = array($planSelected);
@@ -100,6 +106,17 @@ if (is_array($currentInformation)) {
     }
     print '</fieldset>';
 }
+//if they submit the form and their are semester credits
+if (is_array($credits)){
+    $counter = 1;
+    print '<fieldset>';
+    print '<legend>Credits by Semester</legend>';
+    foreach($credits as $credit){
+        print '<p>Year '. $credit['fnkTermYear']. ' ' . $credit['fnkTerm'] . ': '. $credit['SUM(fldCredits)'] .' credits</p>';
+    }
+    print '</fieldset>';
+}
+//print out the class info
 if (is_array($classes)) {
     print '<fieldset>';
     print '<legend>Color Legend</legend>';

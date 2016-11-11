@@ -8,8 +8,11 @@ include "nav.php";
 $currentUser = htmlentities($_SERVER["REMOTE_USER"], ENT_QUOTES, "UTF-8");
 //default plan selected to null
 $planSelected = "";
+//default department selected to null
 $deptSelected = "";
+//intialize classSelected as empty array
 $classSelected = array();
+//term,termYear and requirement are null
 $termSelected = "";
 $termYearSelected = "";
 $requirement = "";
@@ -19,21 +22,22 @@ $getPlansQuery .= 'FROM tblPlans JOIN tblDegrees ON pmkDegreeId = fnkDegreeId WH
 $planQueryData = array($currentUser);
 $plans = $thisDatabaseReader->select($getPlansQuery, $planQueryData, 1);
 ################################################################
-//if form is submitted
+//if filter class button is pressed
 if (isset($_GET["filter"])) {
-//get the values from the form
+    //get the values from the form
     $planSelected = htmlentities($_GET["plans"], ENT_QUOTES, "UTF-8");
     //get the submitted dept value and store in $dept default % to get all classes before dept is set
     $deptSelected = htmlentities($_GET['departmentLB'], ENT_QUOTES, "UTF-8");
     $currentSelection = $_GET['classbydeptLB'];
+    //get the values from the multiple select class listbox
     foreach ($currentSelection as $selectedOption) {
         array_push($classSelected, $selectedOption);
     }
-    //get the submitted class value and store in $class default % to get all classes in dept before classes is set
     $termSelected = htmlentities($_GET['termLB'], ENT_QUOTES, "UTF-8");
     $termYearSelected = htmlentities($_GET['termYearLB'], ENT_QUOTES, "UTF-8");
     $requirement = htmlentities($_GET['requirementLB'], ENT_QUOTES, "UTF-8");
 }
+//if the form is submitted
 if (isset($_GET["formSubmit"])) {
     //get the values from the form
     $planSelected = htmlentities($_GET["plans"], ENT_QUOTES, "UTF-8");
@@ -41,6 +45,7 @@ if (isset($_GET["formSubmit"])) {
     $deptSelected = htmlentities($_GET['departmentLB'], ENT_QUOTES, "UTF-8");
     //get the submitted class value and store in $class default % to get all classes in dept before classes is set
     $currentSelection = $_GET['classbydeptLB'];
+    //loop through multiple select listbox
     foreach ($currentSelection as $selectedOption) {
         array_push($classSelected, $selectedOption);
     }
@@ -94,6 +99,7 @@ if (isset($_GET["formSubmit"])) {
 <form method = "get" action = "chooseCourse.php" id="inlineform">
     <fieldset id = "planForm2">
         <legend>Choose a plan to add classes to</legend>
+        <!--plan selection listbox-->
         <select name="plans">
             <?php
             if (is_array($plans)) {
@@ -128,8 +134,7 @@ if (isset($_GET["formSubmit"])) {
     <fieldset class="buttons">
         <legend></legend>
     </fieldset>
-    <!--this page will display a listbox of all distinct departments-->
-    <!--    begin select with name departmentLB-->
+    <!--this select shows all distinct departments-->
     <fieldset class="PlanForm">
         <legend>Sort courses by deparment, hold ctrl key to select multiple</legend>
         <select name="departmentLB" size="12">
@@ -158,13 +163,14 @@ if (isset($_GET["formSubmit"])) {
             ?>
             <!--end select-->
         </select>
+        <!--this is a multiple select listbox for classes-->
         <select name="classbydeptLB[]" multiple="multiple" size ="12">
             <?php
             if ($deptSelected == "") {
                 $classByDept = 'SELECT fldDepartment, fldCourseNumber, fldCourseTitle, pmkCourseID FROM tblCourses';
                 $classes = $thisDatabaseReader->select($classByDept, "", 0, 0, 0, 0, false, false);
             } else {
-//put the selected department in an array to pass into the query
+            //put the selected department in an array to pass into the query
                 $inputForClassListbox = array($deptSelected);
                 //initialize SQL query
                 $classByDept = 'SELECT fldDepartment, fldCourseNumber, fldCourseTitle, pmkCourseID '

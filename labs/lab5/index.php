@@ -20,6 +20,7 @@ for ($i = 0; $i < 116; $i++) {
 }
 ###############On Form Submission######################################################
 if (isset($_GET["btnSubmit"])) {
+    //get all the values
     $studentNetId = htmlentities($_GET["studentNetId"], ENT_QUOTES, "UTF-8");
     $advisorNetId = htmlentities($_GET["advisorNetId"], ENT_QUOTES, "UTF-8");
     $yearEntered = htmlentities($_GET["yearEntered"], ENT_QUOTES, "UTF-8");
@@ -62,6 +63,7 @@ if (isset($_GET["btnSubmit"])) {
     $tblAdvisorsQuery .= 'fldAdvisorLastName = ? ,';
     $tblAdvisorsQuery .= 'fldAdvisorEmail = ?';
     $thisDatabaseWriter->insert($tblAdvisorsQuery, $tblAdvisorsInfo);
+    //they must select a degree if not show an error message
     if($degreeSelected == ""){
         print '<h3>You must select a degree</h3>';
     } else{

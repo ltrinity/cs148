@@ -2,6 +2,7 @@
 //initialize database connection
 include	"top.php";
 include "nav.php";?>
+<!--this table is copied from mywebdb-->
 <h2>tblAdvisors</h2>
 <table  class="print"><tr><th >Column</th><th >Type</th><th >Null</th><th >Default</th>    <th>Links to</th>
         <th>Comments</th>
