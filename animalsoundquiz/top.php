@@ -4,9 +4,9 @@ include "lib/constants.php";
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CS 148 Database Design Webpage</title>
+        <title>Animal Sound Quiz</title>
         <meta name="author" content="Luke Trinity">
-        <meta name="description" content="Aniamal sound quiz database connection">
+        <meta name="description" content="A website to test your knowledge of animal noises, level up to be the best! ">
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php
