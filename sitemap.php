@@ -8,6 +8,7 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+    <a href="animalsoundquiz/sitemap.php">ASQ</a>
 <p>Develop <a href="labs/lab1/index.php">Lab1</a></p>
 <p>Develop <a href="labs/lab2/index.php">Lab2</a></p>
 <p>Develop <a href="labs/lab3/index.php">Lab3</a></p>
