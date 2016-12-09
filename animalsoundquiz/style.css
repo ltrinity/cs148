@@ -13,6 +13,13 @@
     border-color: white;
     border-radius: 32px;
 }
+#pleaseFloat{
+    float:left;
+    margin-right:10px;
+}
+#pleaseFloat2{
+    text-align:left;
+}
 h2{
     border-style: solid;
     border-color: white;
